@@ -21,7 +21,7 @@ public class Ceaser {
     }
 
     public static void main(String[] args) {
-        String plaintext = "Jayakarthik.jk";
+        String plaintext = "Anna University";
         int offset = 3;
         String ciphertext = encode(plaintext, offset);
         System.out.println("Plaintext: " + plaintext);
@@ -31,6 +31,6 @@ public class Ceaser {
 }
 
 // Output
-// Plaintext: Jayakarthik.jk
-// Ciphertext: Mdbdnduwkln.mn
-// Decoded: Jayakarthik.jk
+// Plaintext: Anna University
+// Ciphertext: Dqqd Xqlyhuvlwb
+// Decoded: Anna University

@@ -3,7 +3,7 @@ import java.security.*;
 // DSA
 public class DSA {
     public static void main(String[] args) throws Exception {
-        String plaintext = "Jayakarthik.jk";
+        String plaintext = "Anna University";
         KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance("DSA");
         keyPairGenerator.initialize(2048);
         KeyPair keyPair = keyPairGenerator.generateKeyPair();

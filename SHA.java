@@ -13,7 +13,7 @@ public class SHA {
 
     public static void main(String[] args) throws Exception {
         MessageDigest md = MessageDigest.getInstance("SHA-1");
-        String input = "Jayakarthik.jk";
+        String input = "Anna University";
         md.update(input.getBytes());
         byte[] hash = md.digest();
         System.out.println(String.format("SHA('%s') = %s", input, toHex(hash)));
@@ -21,4 +21,4 @@ public class SHA {
 }
 
 // Output
-// SHA('Jayakarthik.jk') = DF5AAE2546FA74AD15BCACA634AF2AD5B8A00E00
+// SHA('Anna University') = 275A1E38B121FA6F977738BBEF9B73D3931C69A6

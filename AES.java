@@ -15,9 +15,9 @@ public class AES {
     public static void main(String[] args) throws Exception {
 
         // initialization
-        String plaintext = "Jayakarthik.jk";
+        String plaintext = "Anna University";
         Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
-        SecretKeySpec key = getKey("secretkey".getBytes());
+        SecretKeySpec key = getKey("www.annauniv.edu".getBytes());
 
         // encryption
         cipher.init(Cipher.ENCRYPT_MODE, key);
@@ -35,6 +35,6 @@ public class AES {
 }
 
 // Output
-// Plaintext: Jayakarthik.jk
-// Encrypted: ???@b??f??qw_?I?
-// Decrypted: Jayakarthik.jk
+// Plaintext: Anna University
+// Encrypted: kF?.??e?????j(l?
+// Decrypted: Anna University

@@ -4,7 +4,7 @@ import javax.crypto.*;
 public class DES {
     public static void main(String[] args) throws Exception {
 
-        String plaintext = "Jayakarthik.jk";
+        String plaintext = "Anna University";
         // initialize
         KeyGenerator generator = KeyGenerator.getInstance("DES");
         SecretKey key = generator.generateKey();
@@ -24,6 +24,6 @@ public class DES {
 }
 
 // Output
-// Plaintext: Jayakarthik.jk
-// Encrypted: b!?fDU▼??Q?(Pb?▲
-// Decrypted: Jayakarthik.jk
+// Plaintext: Anna University
+// Encrypted: ???I??h?B.????
+// Decrypted: Anna University
