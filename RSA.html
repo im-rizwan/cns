@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RSA</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>RSA</h1>
+    <label>
+      first prime number:
+      <input type="text" id="first_prime" value="53" />
+    </label>
+    <label>
+      second prime number:
+      <input type="text" id="second_prime" value="59" />
+    </label>
+    <label>
+      Message:
+      <input type="text" id="message" value="89" />
+    </label>
+    <button id="apply">Apply</button>
+    <span id="public_key"></span>
+    <span id="exponent"></span>
+    <span id="private_key"></span>
+    <span id="cipher_text"></span>
+
+    <script>
+      document.getElementById("apply").addEventListener("click", () => {
+        const gcd = (a, b) => (b === 0 ? a : gcd(b, a % b));
+        const first_prime = document.getElementById("first_prime").value;
+        const second_prime = document.getElementById("second_prime").value;
+        const message = document.getElementById("message").value;
+        const public_key = document.getElementById("public_key");
+        const private_key = document.getElementById("private_key");
+        const exponent = document.getElementById("exponent");
+        const cipher_text = document.getElementById("cipher_text");
+        const n = first_prime * second_prime;
+        const phi = (first_prime - 1) * (second_prime - 1);
+        let e = 2;
+        while (e < phi) {
+          if (gcd(e, phi) === 1) {
+            break;
+          }
+          e++;
+        }
+        let d = 2;
+        while (d < phi) {
+          if ((d * e) % phi === 1) {
+            break;
+          }
+          d++;
+        }
+        const ctt = Math.pow(message, e).toFixed(0) % n;
+        const ct = ctt % n;
+        const dtt = Math.pow(ct, d).toFixed(0) % n;
+        const dt = dtt % n;
+        public_key.innerText = `public key: ${n}`;
+        private_key.innerText = `private key: ${d}`;
+        exponent.innerText = `exponent: ${e}`;
+        cipher_text.innerText = `cipher text: ${ct}`;
+      });
+    </script>
+  </body>
+</html>
