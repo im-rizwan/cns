@@ -1,4 +1,4 @@
-public class Vigenere {
+public class vigenere {
     static String encode(String text, final String key) {
         String res = "";
         text = text.toUpperCase();
