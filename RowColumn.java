@@ -1,4 +1,4 @@
-public class RowColumn {
+public class Rowcolumn {
     public static void main(String args[]) {
         String plaintext = "Security Laboratory";
         String s = "";
