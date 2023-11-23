@@ -1,5 +1,5 @@
 // Defi Hellman
-public class DefiHellman {
+public class DiffeHellman {
     public static void main(String[] args) {
         int prime = 23;
         int primitiveRoot = 5;

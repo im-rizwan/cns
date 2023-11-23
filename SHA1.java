@@ -1,7 +1,7 @@
 import java.security.MessageDigest;
 
 // SHA-1
-public class SHA {
+public class SHA1 {
 
     static String toHex(byte[] bytes) {
         String result = "";
