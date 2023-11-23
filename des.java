@@ -1,7 +1,7 @@
 import javax.crypto.*;
 
 // DES Algorithm
-public class DES {
+public class des {
     public static void main(String[] args) throws Exception {
 
         String plaintext = "Anna University";

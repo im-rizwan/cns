@@ -4,7 +4,7 @@ import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
 
 // AES Algorithm
-public class AES {
+public class aes {
 
     static SecretKeySpec getKey(byte[] key) throws Exception {
         MessageDigest sha = MessageDigest.getInstance("SHA-1");

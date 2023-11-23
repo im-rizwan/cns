@@ -1,4 +1,4 @@
-public class Hill {
+public class hill{
     public static int[][] keymat = {
             { 1, 2, 1 },
             { 2, 3, 2 },

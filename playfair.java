@@ -1,6 +1,6 @@
 import java.awt.Point;
 
-class Playfair {
+class playfair {
     private static char[][] charTable;
     private static Point[] positions;
 

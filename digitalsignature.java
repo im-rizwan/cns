@@ -1,7 +1,7 @@
 import java.security.*;
 
 // Digital Signature Algorithm (DSA) 
-public class Digitalsignature {
+public class digitalsignature {
     public static void main(String[] args) throws Exception {
         String plaintext = "Anna University";
         KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance("DSA");

@@ -1,4 +1,4 @@
-public class Railfence {
+public class railfence {
     int depth;
 
     static String encode(String msg, int depth) throws Exception {

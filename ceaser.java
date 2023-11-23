@@ -1,5 +1,5 @@
 // ceaser cipher
-public class Ceaser {
+public class ceaser {
     static String encode(String plaintext, int offset) {
         String ciphertext = "";
         for (char ch : plaintext.toCharArray()) {
