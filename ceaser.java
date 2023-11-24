@@ -2,12 +2,14 @@
 public class ceaser {
     static String encode(String plaintext, int offset) {
         String ciphertext = "";
+        String upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String lower = "abcdefghijklmnopqrstuvwxyz";
         for (char ch : plaintext.toCharArray()) {
             if (Character.isLetter(ch)) {
                 if (Character.isUpperCase(ch)) {
-                    ciphertext += (char) ((ch + offset - 'A') % 26 + 'A');
+                    ciphertext += upper.charAt((upper.indexOf(ch) + offset) % 26);
                 } else {
-                    ciphertext += (char) ((ch + offset - 'a') % 26 + 'a');
+                    ciphertext += lower.charAt((lower.indexOf(ch) + offset) % 26);
                 }
             } else {
                 ciphertext += ch;
