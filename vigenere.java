@@ -7,7 +7,7 @@ public class vigenere {
             if (c < 'A' || c > 'Z') {
                 continue;
             }
-            res += (char) ((c + key.charAt(j) - 2 * 'A') % 26 + 'A');
+            res += (char) ((c + key.charAt(j)) % 26 + 'A');
             j = ++j % key.length();
         }
         return res;
