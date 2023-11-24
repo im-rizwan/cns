@@ -14,8 +14,7 @@ public class sha1 {
     public static void main(String[] args) throws Exception {
         MessageDigest md = MessageDigest.getInstance("SHA-1");
         String input = "Anna University";
-        md.update(input.getBytes());
-        byte[] hash = md.digest();
+        byte[] hash = md.digest(input.getBytes());
         System.out.println(String.format("SHA('%s') = %s", input, toHex(hash)));
     }
 }
