@@ -1,23 +1,23 @@
 public class railfence {
 
     static String encode(String msg, int depth) throws Exception {
-        int r = depth;
-        int l = msg.length();
-        int c = l / depth;
+        int len = msg.length();
+        int row = depth;
+        int col = len / depth;
         int k = 0;
-        char mat[][] = new char[r][c];
+        char mat[][] = new char[row][col];
         String enc = "";
-        for (int i = 0; i < c; i++) {
-            for (int j = 0; j < r; j++) {
-                if (k != l) {
+        for (int i = 0; i < col; i++) {
+            for (int j = 0; j < row; j++) {
+                if (k != len) {
                     mat[j][i] = msg.charAt(k++);
                 } else {
                     mat[j][i] = 'X';
                 }
             }
         }
-        for (int i = 0; i < r; i++) {
-            for (int j = 0; j < c; j++) {
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
                 enc += mat[i][j];
             }
         }
@@ -25,19 +25,19 @@ public class railfence {
     }
 
     static String decode(String encmsg, int depth) throws Exception {
-        int r = depth;
-        int l = encmsg.length();
-        int c = l / depth;
+        int len = encmsg.length();
+        int row = depth;
+        int col = len / depth;
         int k = 0;
-        char mat[][] = new char[r][c];
+        char mat[][] = new char[row][col];
         String dec = "";
-        for (int i = 0; i < r; i++) {
-            for (int j = 0; j < c; j++) {
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
                 mat[i][j] = encmsg.charAt(k++);
             }
         }
-        for (int i = 0; i < c; i++) {
-            for (int j = 0; j < r; j++) {
+        for (int i = 0; i < col; i++) {
+            for (int j = 0; j < row; j++) {
                 dec += mat[j][i];
             }
         }
